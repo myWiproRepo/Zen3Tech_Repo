@@ -1,0 +1,11 @@
+{
+	"name": "LS_AzureKV_managedIdentity",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://Zen3techHiddenKV.vault.azure.net/"
+		}
+	}
+}
