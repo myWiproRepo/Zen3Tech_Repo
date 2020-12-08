@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "zen3techADF"
+		},
+		"LS_ADLSgen2_TGT_accountKey": {
+			"value": ""
+		},
+		"LS_ORC_SRC_connectionString": {
+			"value": ""
+		},
+		"LS_ADLSgen2_TGT_properties_typeProperties_url": {
+			"value": "https://zen3techsa.dfs.core.windows.net"
+		},
+		"LS_AzureKV_managedIdentity_properties_typeProperties_baseUrl": {
+			"value": "https://Zen3techHiddenKV.vault.azure.net/"
+		}
+	}
+}
