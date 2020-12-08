@@ -1,0 +1,16 @@
+{
+	"name": "ORC_Parquet_DATASET",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ORC_SRC",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "HR",
+			"table": "EMPLOYEES"
+		}
+	}
+}

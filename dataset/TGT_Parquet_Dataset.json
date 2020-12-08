@@ -1,0 +1,21 @@
+{
+	"name": "TGT_Parquet_Dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLSgen2_TGT",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Employee.parquet",
+				"folderPath": "Parquet",
+				"fileSystem": "OUTPUT"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
