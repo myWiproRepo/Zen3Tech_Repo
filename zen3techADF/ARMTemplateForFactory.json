@@ -95,6 +95,27 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DS_ORC_Department')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "LS_ORC_SRC",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "OracleTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "HR",
+					"table": "DEPARTMENTS"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/LS_ORC_SRC')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/ORC_Parquet_DATASET')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
