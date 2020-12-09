@@ -14,7 +14,7 @@
 			],
 			"sinks": [],
 			"transformations": [],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'excel',\n\tsheetName: '',\n\tfirstRowAsHeader: false) ~> ADLSgen2EMP"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'excel',\n\tfileSystem: 'input2csv',\n\tfolderPath: 'csvfiles',\n\tfileName: 'EMPLOYEES_202011271102.csv',\n\tsheetName: '',\n\tfirstRowAsHeader: false) ~> ADLSgen2EMP"
 		}
 	}
 }
