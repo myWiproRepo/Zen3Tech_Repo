@@ -1,0 +1,16 @@
+{
+	"name": "DS_ORC_Department",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ORC_SRC",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "HR",
+			"table": "DEPARTMENTS"
+		}
+	}
+}
