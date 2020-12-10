@@ -10,11 +10,25 @@
 						"type": "DatasetReference"
 					},
 					"name": "EmployeeSrc"
+				},
+				{
+					"dataset": {
+						"referenceName": "Dept_DS",
+						"type": "DatasetReference"
+					},
+					"name": "DepartmentSRC"
+				},
+				{
+					"dataset": {
+						"referenceName": "Country_DS",
+						"type": "DatasetReference"
+					},
+					"name": "CountrySRC"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> EmployeeSrc"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> EmployeeSrc\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> DepartmentSRC\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> CountrySRC"
 		}
 	}
 }
