@@ -33,12 +33,30 @@
 					"name": "LocationSRC"
 				},
 				{
-					"name": "source1"
+					"dataset": {
+						"referenceName": "EmpHistory_DS",
+						"type": "DatasetReference"
+					},
+					"name": "EmpHistorySRC"
+				},
+				{
+					"dataset": {
+						"referenceName": "Regions_DS",
+						"type": "DatasetReference"
+					},
+					"name": "RegionsSRC"
+				},
+				{
+					"dataset": {
+						"referenceName": "JOBS_DS",
+						"type": "DatasetReference"
+					},
+					"name": "JobsSRC"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> EmployeeSrc\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> DepartmentSRC\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> CountrySRC\nsource(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as string,\n\t\tColumn_5 as string,\n\t\tColumn_6 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> LocationSRC\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1"
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> EmployeeSrc\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> DepartmentSRC\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> CountrySRC\nsource(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string,\n\t\tColumn_4 as string,\n\t\tColumn_5 as string,\n\t\tColumn_6 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> LocationSRC\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> EmpHistorySRC\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> RegionsSRC\nsource(output(\n\t\tJOB_ID as string,\n\t\tJOB_TITLE as string,\n\t\tMIN_SALARY as string,\n\t\tMAX_SALARY as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> JobsSRC"
 		}
 	}
 }

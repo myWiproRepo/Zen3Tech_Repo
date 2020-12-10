@@ -1,0 +1,24 @@
+{
+	"name": "EmpHistory_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_MappingDF",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "JOB_HISTORY_202012101726.csv",
+				"folderPath": "csvfiles",
+				"fileSystem": "input2csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

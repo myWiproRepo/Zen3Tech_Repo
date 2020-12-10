@@ -1,0 +1,41 @@
+{
+	"name": "JOBS_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_MappingDF",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "JOBS_202011292036.csv",
+				"folderPath": "csvfiles",
+				"fileSystem": "input2csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "JOB_ID",
+				"type": "String"
+			},
+			{
+				"name": "JOB_TITLE",
+				"type": "String"
+			},
+			{
+				"name": "MIN_SALARY",
+				"type": "String"
+			},
+			{
+				"name": "MAX_SALARY",
+				"type": "String"
+			}
+		]
+	}
+}
