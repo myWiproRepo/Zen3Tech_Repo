@@ -1,0 +1,29 @@
+{
+	"name": "Employee_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_MappingDF",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"LastUpdated": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "EMPLOYEES_202011271102.csv",
+				"folderPath": "csvfiles",
+				"fileSystem": "input2csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
