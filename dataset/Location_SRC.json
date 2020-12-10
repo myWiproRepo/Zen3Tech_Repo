@@ -1,0 +1,47 @@
+{
+	"name": "Location_SRC",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_MappingDF",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"LastModified": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "LOCATIONS_202012102317.csv",
+				"folderPath": "csvfiles",
+				"fileSystem": "input2csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}
