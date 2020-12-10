@@ -1,0 +1,69 @@
+{
+	"name": "DS_EMPLOYEE_UPSERT",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLtable",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EMPLOYEE_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FIRST_NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LAST_NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EMAIL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PHONE_NUMBER",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "HIRE_DATE",
+				"type": "date"
+			},
+			{
+				"name": "JOB_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SALARY",
+				"type": "decimal",
+				"precision": 8,
+				"scale": 2
+			},
+			{
+				"name": "COMMISSION_PCT",
+				"type": "decimal",
+				"precision": 2,
+				"scale": 2
+			},
+			{
+				"name": "MANAGER_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEPARTMENT_ID",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "EMPLOYEES"
+		}
+	}
+}
