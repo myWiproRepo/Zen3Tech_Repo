@@ -26,21 +26,27 @@
 		},
 		"schema": [
 			{
+				"name": "LOCATION_ID",
 				"type": "String"
 			},
 			{
+				"name": "STREET_ADDRESS",
 				"type": "String"
 			},
 			{
+				"name": "POSTAL_CODE",
 				"type": "String"
 			},
 			{
+				"name": "CITY",
 				"type": "String"
 			},
 			{
+				"name": "STATE_PROVINCE",
 				"type": "String"
 			},
 			{
+				"name": "COUNTRY_ID",
 				"type": "String"
 			}
 		]
