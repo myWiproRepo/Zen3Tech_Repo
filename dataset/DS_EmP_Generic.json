@@ -1,0 +1,36 @@
+{
+	"name": "DS_EmP_Generic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLSgen2_TGT",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "csvfiles",
+				"fileSystem": "input2csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "COUNTRY_ID",
+				"type": "String"
+			},
+			{
+				"name": "COUNTRY_NAME",
+				"type": "String"
+			},
+			{
+				"name": "REGION_ID",
+				"type": "String"
+			}
+		]
+	}
+}
