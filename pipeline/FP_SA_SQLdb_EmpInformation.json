@@ -25,6 +25,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -35,13 +36,24 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Get_EMpMetadata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Get_EMpMetadata').output.ChildItems",
+						"type": "Expression"
+					},
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Copy data1",
+							"name": "CP_ADLSgen2_SQLdb",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -53,8 +65,44 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"sink": {
+									"type": "AzureSqlSink"
+								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "Copy_DS_Emp_Genric",
+									"type": "DatasetReference",
+									"parameters": {
+										"dataSet": {
+											"value": "@item().Childtems",
+											"type": "Expression"
+										},
+										"Modified": {
+											"value": "@item().LastModified",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DS_Sqldb_Generic",
+									"type": "DatasetReference"
+								}
+							]
 						}
 					]
 				}
