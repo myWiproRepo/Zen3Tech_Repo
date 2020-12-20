@@ -1,0 +1,35 @@
+{
+	"name": "Copy_DS_Emp_Genric",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLSgen2_TGT",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			},
+			"Modified": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().TableName",
+					"type": "Expression"
+				},
+				"folderPath": "csvfiles",
+				"fileSystem": "input2csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
