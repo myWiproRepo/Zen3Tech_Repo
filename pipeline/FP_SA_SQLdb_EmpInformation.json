@@ -78,7 +78,7 @@
 								"sink": {
 									"type": "AzureSqlSink",
 									"preCopyScript": {
-										"value": "drop table @dataset().TableName",
+										"value": "drop table @item().name",
 										"type": "Expression"
 									},
 									"tableOption": "autoCreate",
