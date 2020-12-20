@@ -19,7 +19,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().TableName",
+					"value": "@dataset().dataSet",
 					"type": "Expression"
 				},
 				"folderPath": "csvfiles",
