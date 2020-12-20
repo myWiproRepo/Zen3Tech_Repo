@@ -20,8 +20,7 @@
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"childItems",
-						"lastModified"
+						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
@@ -89,10 +88,6 @@
 									"parameters": {
 										"dataSet": {
 											"value": "@item().name",
-											"type": "Expression"
-										},
-										"Modified": {
-											"value": "@item().LastModified",
 											"type": "Expression"
 										}
 									}
