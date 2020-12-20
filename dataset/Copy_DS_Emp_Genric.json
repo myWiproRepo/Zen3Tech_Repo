@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"TableName": {
+			"dataSet": {
 				"type": "string"
 			},
 			"Modified": {
